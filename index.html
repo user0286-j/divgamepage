@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DivGame</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        const main = document.querySelector('main');
+        const MAX_FRAMES = 29;
+        let current_frame = 0;
+        function updateImage(frame = 0){
+            const src = `img/${frame}.webp`
+            img.src = src;
+        }
+
+        // Inicializar
+        const img = document.createElement('img');
+        main.appendChild(img);
+        updateImage(current_frame)
+
+        // Altura máxima
+        let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        window.addEventListener('resize', ()=>{
+            maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        });
+
+        let lastFrameUpdate = 0;
+
+        window.addEventListener('scroll', ()=>{
+            if (Date.now() - lastFrameUpdate < 1) return true;
+            // Actualizar el contador
+            lastFrameUpdate = Date.now();
+            // current position
+            const scrollPosition = window.scrollY;
+            // Calcular el porcentaje
+            const scrollFraction = scrollPosition / maxScroll;
+            // What frame do you play?
+            const frame = Math.floor(scrollFraction*MAX_FRAMES);
+
+            if (current_frame !== frame){
+                updateImage(frame)
+                current_frame = frame;
+            }
+
+        });
+    </script>
+    
 </head>
 <body>
-    
+    <main>
+        <header>
+            DIVGAME
+        </header>
+    </main>
 </body>
 </html>
