@@ -22,7 +22,7 @@
         updateImage(current_frame)
 
         // Altura máxima
-        let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        let maxScroll = 2*window.innerHeight;
 
         window.addEventListener('resize', ()=>{
             maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -54,7 +54,7 @@
     <main>
         <header>
             DIVGAME
-        </header>        
+        </header>           
     </main>
     <div class="introduction">
         <h2>Introducción</h2>
@@ -64,10 +64,6 @@
             Profesional de Ingeniería Informática y de Sistemas, y demás escuelas profesionales 
             interesados en este tema como Electrónica, etc.
         </p>
-    </div>
-
-    <div class="siguiente">
-        continuará...
     </div>
 
 

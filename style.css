@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
+
 img{
     width: 100vw;
     height: 100dvh;
@@ -55,4 +56,23 @@ header{
     padding: 0px 30px;
     font-weight: bold;
     font-size: 30px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #111; 
 }
