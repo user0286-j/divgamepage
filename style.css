@@ -17,7 +17,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 100%;
     color: aliceblue;
     display: flex;
     align-items: center;
@@ -26,4 +26,33 @@ header{
     font-family: monospace;
     font-size: 30px;
     z-index: 1;
+}
+
+.introduction{
+    position: absolute;
+    top: 213dvh;
+    left: 10%;
+    width: 50vw;
+    height: 75dvh;
+    border-radius: 20px;
+    /*background-color: rgba(200, 200, 200, 0.05);*/
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+}
+
+.introduction p{
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    color: white;
+    padding: 5px 30px 10px 30px;
+    font-size: 25px;
+    text-align: justify;
+
+    min-height: 2em;
+}
+
+.introduction h1,h2{
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    color: white;
+    padding: 0px 30px;
+    font-weight: bold;
+    font-size: 30px;
 }

@@ -6,6 +6,7 @@
     <title>DivGame</title>
 
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
     <script type="module">
         const main = document.querySelector('main');
         const MAX_FRAMES = 29;
@@ -53,7 +54,49 @@
     <main>
         <header>
             DIVGAME
-        </header>
+        </header>        
     </main>
+    <div class="introduction">
+        <h2>Introducción</h2>
+        <p id="intro-text">
+            Teniendo como denominación oficial, Development and Innovation in Videogames
+            o abreviadamente DivGames, consiste en una asociación de estudiantes de la Escuela
+            Profesional de Ingeniería Informática y de Sistemas, y demás escuelas profesionales 
+            interesados en este tema como Electrónica, etc.
+        </p>
+    </div>
+
+    <div class="siguiente">
+        continuará...
+    </div>
+
+
+    <script>
+    (function() {
+        const p = document.getElementById('intro-text');
+        const fullText = p.textContent;
+        p.textContent = '';
+        let i = 0;
+        let started = false;
+        function typeWriter() {
+            if (i < fullText.length) {
+                p.textContent += fullText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 5);
+            }
+        }
+        function checkScroll() {
+            const rect = p.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            if (!started && rect.top < windowHeight && rect.bottom > 0) {
+                started = true;
+                typeWriter();
+                window.removeEventListener('scroll', checkScroll);
+            }
+        }
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
+    })();
+    </script>
 </body>
 </html>
