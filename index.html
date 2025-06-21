@@ -7,11 +7,13 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.ico" type="img/png">
     <script type="module">
         const main = document.querySelector('main');
         const MAX_FRAMES = 29;
         let current_frame = 0;
         function updateImage(frame = 0){
+            if (frame > MAX_FRAMES) frame = MAX_FRAMES;
             const src = `img/${frame}.webp`
             img.src = src;
         }
@@ -53,7 +55,6 @@
 <body>
     <main>
         <header>
-            DIVGAME
         </header>           
     </main>
     <div class="introduction">
@@ -64,6 +65,89 @@
             Profesional de Ingeniería Informática y de Sistemas, y demás escuelas profesionales 
             interesados en este tema como Electrónica, etc.
         </p>
+    </div>
+
+    <div class="segundo">
+
+    </div>
+
+    <div class="tercero">
+        <div class="historia">
+            <h2>Historia</h2>
+            <p>El CeDeV fue establecido el día 29 de agosto del 2023 por estudiantes de pregrado
+                de la Escuela Profesional de Ingeniería Informática y de Sistemas de la Universidad
+                Nacional de San Antonio Abad del Cusco y posteriormente, el 26 de septiembre del
+                2023, cambió su nombre a Div-Games<br><br>
+            
+            </p>
+        </div>
+    </div>
+
+    <div class="cuarto">
+        <div class="junta">
+            <h2>Junta directiva</h2>
+            <!-- Presidente-->
+            <div class="persona">
+                    <img class="persona-imagen" src="profile/presidente.jpeg" alt="presidente">
+                <div class="persona-texto">
+                    <h3>Amilcar Estacio Medrano</h3>
+                    <h4>Presidente</h4>
+                    <p>
+                        "Herbalife me cambió la vida, yo antes era un nerd de metro cincuenta, pero cuando apareció por esa puerta Tony Rosado con su paquete de herbalife, no le tenia esperanzas, hasta que mi amigo EsoTilin lo probó, y a las semanas se volvió viral en internet. De ahi algo cambio dentro mio, y decidí darle una oportunidad, sin duda, Mi vida mejoró notablemente, antes me demoraba 4 horas en el baño, ahora me demoro 2 🥰, Unete tu tambien a Herbalife y cambia tu vida"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vicepresidente-->
+            <div class="persona">
+                    <img class="persona-imagen" src="profile/foto.jpg" alt="presidente">
+                <div class="persona-texto">
+                    <h3>Cesar Ciro Olante Bautista</h3>
+                    <h4>Vicepresidente</h4>
+                    <p>
+                        Entusiasta dentro del mundo del gamedevelopment, con ganas de dejar marca en mi pais :3
+                    </p>
+                </div>
+            </div>
+
+            <!-- Secretario-->
+            <div class="persona">
+                    <img class="persona-imagen" src="profile/foto.jpg" alt="presidente">
+                <div class="persona-texto">
+                    <h3>André Marcelo Mendoza Mayta</h3>
+                    <h4>Secretario</h4>
+                    <p>
+                        Entusiasta dentro del mundo del gamedevelopment, con ganas de dejar marca en mi pais :3
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vocal Principal-->
+            <div class="persona">
+                    <img class="persona-imagen" src="profile/foto.jpg" alt="presidente">
+                <div class="persona-texto">
+                    <h3>Julio Cesar Sotelo Quispe </h3>
+                    <h4>Vocal Principal</h4>
+                    <p>
+                        Entusiasta dentro del mundo del gamedevelopment, con ganas de dejar marca en mi pais :3
+                    </p>
+                </div>
+            </div>
+
+            <!-- Vocal Auxiliar-->
+            <div class="persona">
+                    <img class="persona-imagen" src="profile/foto.jpg" alt="presidente">
+                <div class="persona-texto">
+                    <h3>evin Heli Choquecahua Gutierrez</h3>
+                    <h4>Vocal Auxiliar</h4>
+                    <p>
+                        Entusiasta dentro del mundo del gamedevelopment, con ganas de dejar marca en mi pais :3
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 
 
