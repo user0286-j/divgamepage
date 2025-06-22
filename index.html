@@ -14,7 +14,7 @@
         let current_frame = 0;
         function updateImage(frame = 0){
             if (frame > MAX_FRAMES) frame = MAX_FRAMES;
-            const src = `img/${frame}.webp`
+            const src = `frame/${frame}.webp`
             img.src = src;
         }
 
@@ -27,7 +27,7 @@
         let maxScroll = 2*window.innerHeight;
 
         window.addEventListener('resize', ()=>{
-            maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            maxScroll =  2*window.innerHeight;
         });
 
         let lastFrameUpdate = 0;
@@ -145,12 +145,30 @@
                     </p>
                 </div>
             </div>
+        </div>
 
-
+        <!--Begin: Sección de divisiones-->
+        <div class="quinto">
+            <div class="divisiones">
+                <div class="division">
+                    <img class="img_division" src="div/Arte.jpg">
+                </div>
+                <div class="division">
+                    <img class="img_division" src="div/desarrollo.jpg">
+                </div>
+                <div class="division">
+                    <img class="img_division" src="div/musica.jpg">
+                </div>
+                <div class="division">
+                    <img class="img_division" src="div/narracion.jpg">
+                </div>
+            </div>
         </div>
     </div>
 
-
+    
+        <!--End: Sección de divisiones-->
+    <script src="app.js"></script>
     <script>
     (function() {
         const p = document.getElementById('intro-text');
