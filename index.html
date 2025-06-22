@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        for (let i = 0; i < 30; i++){
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = `frame/${i}.webp`;
+            document.head.appendChild(link);
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DivGame</title>
@@ -14,7 +23,7 @@
         let current_frame = 0;
         function updateImage(frame = 0){
             if (frame > MAX_FRAMES) frame = MAX_FRAMES;
-            const src = `frame/${frame}.webp`
+            const src = `frame/${frame}.webp`;
             img.src = src;
         }
 
@@ -81,9 +90,29 @@
             
             </p>
         </div>
+        
     </div>
 
     <div class="cuarto">
+        <!--Begin: Sección de divisiones-->
+        <div class="quinto">
+            <h2>Divisiones</h2>
+            <div class="divisiones">
+                <div class="division">
+                    <img class="img_division" src="div/Arte.jpg">
+                </div>
+                <div class="division">
+                    <img class="img_division" src="div/desarrollo.jpg">
+                </div>
+                <div class="division">
+                    <img class="img_division" src="div/musica.jpg">
+                </div>
+                <div class="division">
+                    <img class="img_division" src="div/narracion.jpg">
+                </div>
+            </div>
+        </div>
+
         <div class="junta">
             <h2>Junta directiva</h2>
             <!-- Presidente-->
@@ -147,23 +176,7 @@
             </div>
         </div>
 
-        <!--Begin: Sección de divisiones-->
-        <div class="quinto">
-            <div class="divisiones">
-                <div class="division">
-                    <img class="img_division" src="div/Arte.jpg">
-                </div>
-                <div class="division">
-                    <img class="img_division" src="div/desarrollo.jpg">
-                </div>
-                <div class="division">
-                    <img class="img_division" src="div/musica.jpg">
-                </div>
-                <div class="division">
-                    <img class="img_division" src="div/narracion.jpg">
-                </div>
-            </div>
-        </div>
+        
     </div>
 
     
