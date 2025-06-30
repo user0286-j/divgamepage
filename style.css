@@ -45,9 +45,13 @@ header{
     z-index: 1;
 }
 
+
+html{
+    overflow-x: hidden;
+}
 .introduction{
     position: absolute;
-    top: 213dvh;
+    top: 200dvh;
     left: 10%;
     width: 50vw;
     height: 75dvh;
@@ -101,17 +105,17 @@ header{
 
 .segundo{
     position: absolute;
-    top: 320dvh;
+    top: 270dvh;
     background: linear-gradient(rgba(0,0,0,0.01), black);
     height: 30dvh;
-    width: 100%;
+    width: 100vw;
 }
 
 .tercero{
     position: absolute;
     top: 350dvh;
     height: 100dvh;
-    width: 100%;
+    width: 100vw;
     background-color: #000000;
 }
 
@@ -132,11 +136,11 @@ header{
 }
 
 .cuarto{
-    position: absolute;
-    top: 450dvh;
+    position: static;
+    top: 350dvh;
     height: fit-content;
-    width: 100%;
-    background-color: #000;
+    width: 100vw;
+    background-color: #000000;
 }
 
 .cuarto  .persona{
@@ -184,12 +188,11 @@ header{
 }
 
 
-
 .quinto{
-    position: static;
-    width: 100%;
+    position: relative;
+    width: 100vw;
     height: 100dvh;
-    background-color: #000000;
+    background-color: #000;
     bottom: 0px;
 }
 
@@ -240,3 +243,11 @@ header{
     filter: grayscale(0%);
     transform: scale(1.15);
 }
+
+.junta{
+    position: relative;
+    background-color: #000;
+    height: fit-content;
+    width: 100vw;
+}
+
